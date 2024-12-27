@@ -129,7 +129,7 @@ fi
 
 # Melakukan binding account
 echo -e "${YELLOW}🔗 Mengikat akun dengan ID dan PIN...${NC}"
-./multiple-cli bind --bandwidth-download "$DOWNLOAD" --identifier "$IDENTIFIER" --pin "$PIN" --storage "$STORAGE" --bandwidth-upload "$UPLOAD"
+./multiple-cli bind --bandwidth-download 200 --identifier "$IDENTIFIER" --pin "$PIN" --storage 200 --bandwidth-upload 200
 echo -e "${LIGHT_GREEN}✅ Proses selesai.${NC}"
 
 # Menyelesaikan instalasi
