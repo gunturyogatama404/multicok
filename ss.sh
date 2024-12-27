@@ -121,7 +121,6 @@ PIN=$(read_config "PIN")
 DOWNLOAD=$(read_config "DOWNLOAD")
 UPLOAD=$(read_config "UPLOAD")
 
-
 # Validasi input dari config.json
 if [[ -z "$IDENTIFIER" || -z "$PIN" ]]; then
     echo -e "${RED}❌ ERROR: Account ID dan PIN tidak boleh kosong.${NC}"
