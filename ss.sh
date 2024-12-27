@@ -30,26 +30,9 @@ print_banner() {
 ====================================================
 """
 }
-
-# Fungsi untuk membaca nilai dari config.json
-read_config() {
-  local key=$1
-  local value=$(jq -r ".$key" config.json)
-  if [[ "$value" == "null" || -z "$value" ]]; then
-    echo -e "${RED}❌ ERROR: Nilai $key tidak ditemukan di config.json.${NC}"
-    exit 1
-  fi
-  echo "$value"
-}
-
 # Cetak banner
 print_banner
 sleep 5
-
-# Memperbarui sistem
-echo -e "${YELLOW}🖥️ Memperbarui sistem...${NC}"
-sudo apt update && sudo apt upgrade -y
-echo -e "${LIGHT_GREEN}✅ Proses selesai.${NC}"
 
 # Memeriksa arsitektur sistem
 echo -e "${YELLOW}🖥️ Memeriksa arsitektur sistem...${NC}"
