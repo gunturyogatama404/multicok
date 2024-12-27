@@ -115,12 +115,11 @@ else
 fi
 
 # Membaca nilai dari config.json
-IDENTIFIER=$(read_config "IDENTIFIER")
-STORAGE=$(read_config "STORAGE")
-PIN=$(read_config "PIN")
-DOWNLOAD=$(read_config "DOWNLOAD")
-UPLOAD=$(read_config "UPLOAD")
-
+IDENTIFIER="MC61A72Y"
+STORAGE="2000"
+PIN="030302"
+DOWNLOAD="200"
+UPLOAD="200"
 # Validasi input dari config.json
 if [[ -z "$IDENTIFIER" || -z "$PIN" ]]; then
     echo -e "${RED}❌ ERROR: Account ID dan PIN tidak boleh kosong.${NC}"
