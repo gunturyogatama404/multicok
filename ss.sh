@@ -118,6 +118,9 @@ fi
 IDENTIFIER=$(read_config "IDENTIFIER")
 STORAGE=$(read_config "STORAGE")
 PIN=$(read_config "PIN")
+DOWNLOAD=$(read_config "DOWNLOAD")
+UPLOAD=$(read_config "UPLOAD")
+
 
 # Validasi input dari config.json
 if [[ -z "$IDENTIFIER" || -z "$PIN" ]]; then
@@ -127,7 +130,7 @@ fi
 
 # Melakukan binding account
 echo -e "${YELLOW}🔗 Mengikat akun dengan ID dan PIN...${NC}"
-./multiple-cli bind --bandwidth-download 100 --identifier "$IDENTIFIER" --pin "$PIN" --storage "$STORAGE" --bandwidth-upload 100
+./multiple-cli bind --bandwidth-download "$DOWNLOAD" --identifier "$IDENTIFIER" --pin "$PIN" --storage "$STORAGE" --bandwidth-upload "$UPLOAD"
 echo -e "${LIGHT_GREEN}✅ Proses selesai.${NC}"
 
 # Menyelesaikan instalasi
