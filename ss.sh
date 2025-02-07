@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cm6u8py7g000u08maeh0t2akt-LWXO-FxzQ-2YaT-aDZD
 # Warna untuk output
 RED='\033[0;31m'
 LIGHT_GREEN='\033[1;32m'
